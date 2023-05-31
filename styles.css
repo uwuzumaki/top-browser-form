@@ -3,3 +3,40 @@ body {
   margin: 0;
   padding: 0;
 }
+
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  top: 25%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-div > input:focus {
+  outline: none;
+}
+
+#button-div {
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
