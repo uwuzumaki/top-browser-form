@@ -11,23 +11,37 @@
     <form id="form" action="#" method="post">
       <div class="input-div">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" />
+        <input type="email" id="email" name="email" required />
       </div>
       <div class="input-div">
         <label for="country">Country</label>
-        <input type="text" id="country" name="country" />
+        <input type="text" id="country" name="country" required />
       </div>
       <div class="input-div">
         <label for="zipcode">Zipcode</label>
-        <input type="text" id="zipcode" name="zipcode" />
+        <!-- The pattern attribute in the input element does not accept forward slashes at the beginning
+        and end of the RegExp and thus case insensitivity (/i) cannot be used. Therefore case insensitivity
+        of the RegExp must be specified. -->
+        <input
+          type="text"
+          id="zipcode"
+          name="zipcode"
+          required
+          pattern="^[ABCEGHJ-NPRSTVXYabceghj-nprstvxy][0-9][ABCEGHJ-NPRSTV-Zabceghj-nprstv-z](\s|-)?[0-9][ABCEGHJ-NPRSTV-Zabceghj-nprstv-z][0-9]$"
+        />
       </div>
       <div class="input-div">
         <label for="password">Password</label>
-        <input type="text" id="password" name="password" />
+        <input type="password" id="password" name="password" required />
       </div>
       <div class="input-div">
         <label for="password-confirm">Confirm password</label>
-        <input type="text" id="password-confirm" name="password-confirm" />
+        <input
+          type="password"
+          id="password-confirm"
+          name="password-confirm"
+          required
+        />
       </div>
       <div class="input-div" id="button-div">
         <button id="submit">Submit</button>
