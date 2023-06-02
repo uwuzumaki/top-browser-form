@@ -17,3 +17,27 @@ zipcode.addEventListener("input", () => {
     zipcode.setCustomValidity("");
   }
 });
+
+const password = document.getElementById("password");
+password.addEventListener("input", () => {
+  if (password.validity.patternMismatch) {
+    password.setCustomValidity(
+      "Please enter a valid password. A valid password is 6 - 16 characters long with at least 1 number and 1 special character."
+    );
+  } else {
+    password.setCustomValidity("");
+  }
+});
+
+const passwordConfirm = document.getElementById("password-confirm");
+passwordConfirm.addEventListener("input", () => {
+  if (password.value === passwordConfirm.value) {
+    passwordConfirm.setCustomValidity("");
+    console.log("match");
+  } else {
+    passwordConfirm.setCustomValidity(
+      "Password does not match. Please ensure your passwords match."
+    );
+    console.log("don't match");
+  }
+});
