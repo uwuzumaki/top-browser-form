@@ -42,6 +42,10 @@ input:invalid {
   outline: red solid 1px;
 }
 
+input:valid {
+  outline: green solid 1px;
+}
+
 #button-div {
   width: 100%;
   flex-direction: row;
